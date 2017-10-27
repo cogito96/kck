@@ -28,11 +28,16 @@ public class KCK {
         gracz1.wyswietlGracza();
         
         Slowa slowo = new Slowa ();
-        slowo.dodajLiterke('a',gracz1);
+        slowo.tymczasoweZapelnienie();
+        
+        Scanner literkaScanner = new Scanner(System.in);
+        
+        //char literka = literkaScanner.next().charAt(0);
+        slowo.dodajLiterke('k',gracz1);
         
         
         slowo.wyswietlslowo();
-        slowo.wyswietlslowoZgadywane();
+       
         
         
         

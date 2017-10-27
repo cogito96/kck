@@ -12,6 +12,7 @@ package kck;
 public class Slowa {
     private String slowo = "anna";
     private char[] slowoZgadywane= new char[this.slowo.length()] ;
+    private char [] uzyteLiterki = new char [32];
     private int probaZgadniecia =0;
     
     void wyswietlslowo()
@@ -23,36 +24,47 @@ public class Slowa {
         System.out.println("Słowo");
         System.out.println(this.slowoZgadywane);
     }
-    
+    void dodajDoTablicyWykorzystanychSlow(int literka)
+    {
+        int indeks = literka - 97;              // 
+        uzyteLiterki[indeks] = (char) literka;
+    }
+    char [] tymczasoweZapelnienie ()
+    {
+        for( int i=0; i<slowoZgadywane.length ; i++)
+        {
+            this.slowoZgadywane[i] = '_';
+        }
+        return this.slowoZgadywane;
+    }
     char[] dodajZgadnietaLiterke(int  indeks , char wybor)       
     {
-       for (int i=0 ; i<this.slowo.length() ; i++)
+        for (int i=0 ; i<this.slowo.length() ; i++)
         {
            if(i == indeks)
            {
                this.slowoZgadywane[i]=wybor;
                return this.slowoZgadywane;
            }
+           
         }
         return this.slowoZgadywane;
     }
     
     void dodajLiterke(char wybor , Gracz gracz)
     {
+        dodajDoTablicyWykorzystanychSlow(wybor);
         for ( int i=0; i < slowo.length(); i++)
         {
             if (this.slowo.charAt(i)== wybor)                 // jeszeli zganie literke 
             {
                 dodajZgadnietaLiterke(i,wybor);
-            }
-            else                                             //jezeli poda literke ktorej nie ma 
-            {
-                System.out.println("_");
-                gracz.iloscSzans --;   
+                this.probaZgadniecia++;
+                return;
             }
         }
         wyswietlslowoZgadywane();
-        this.probaZgadniecia++;
+        gracz.blednaOdpowiedz();
     }
     
     void zgadnijHaslo (String wybor, Gracz gracz )
@@ -77,5 +89,6 @@ public class Slowa {
         gracz.iloscZdobytychPunktow -= 2;
         losuj();
     }
-    
+
+  
 }
