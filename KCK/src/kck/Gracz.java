@@ -30,7 +30,20 @@ public class Gracz {
     {
          System.out.println("Nie trafiłem mlotu :/ ");
          this.iloscSzans --;   
-         System.out.println("Zostało Ci "+ this.iloscSzans);
+         if(iloscSzans == 0)
+         {
+             System.out.println("Zostala Ci ostatani szansa");
+         }
+         else
+             System.out.println("Zostało Ci od wykotzystania "+ this.iloscSzans);
+         if(iloscSzans==-1)
+         {
+             System.out.println("Niestety przegrałes ");
+             return;
+         }
+       
+         
+         
     }
 
   

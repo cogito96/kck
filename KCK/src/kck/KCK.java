@@ -24,21 +24,27 @@ public class KCK {
         System.out.println("Podaj imie gracza ");
         Scanner nazwa = new Scanner(System.in);
         String imie = nazwa.nextLine();
+        
         Gracz gracz1 = new Gracz(imie, 5);
         gracz1.wyswietlGracza();
         
         Slowa slowo = new Slowa ();
         slowo.tymczasoweZapelnienie();
         
-        Scanner literkaScanner = new Scanner(System.in);
+        while(gracz1.iloscSzans >= 0)
+        {
+            slowo.wyswietlslowoZgadywane();
+            
+            System.out.println("Podaj literke ");
+            Scanner literkaScanner = new Scanner(System.in);
+            char literka = literkaScanner.next().charAt(0);
         
-        //char literka = literkaScanner.next().charAt(0);
-        slowo.dodajLiterke('k',gracz1);
+            
+            slowo.dodajLiterke(literka,gracz1);
         
-        
-        slowo.wyswietlslowo();
+            slowo.wyswietlUzyteLiterki();
        
-        
+        }
         
         
         

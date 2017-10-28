@@ -15,6 +15,10 @@ public class Slowa {
     private char [] uzyteLiterki = new char [32];
     private int probaZgadniecia =0;
     
+    void wyswietlUzyteLiterki()
+    {
+        System.out.println(uzyteLiterki);
+    }
     void wyswietlslowo()
     {
         System.out.println(this.slowo);
@@ -53,20 +57,22 @@ public class Slowa {
     
     void dodajLiterke(char wybor , Gracz gracz)
     {
-        dodajDoTablicyWykorzystanychSlow(wybor);
-        for ( int i=0; i < slowo.length(); i++)
+        if(!sprawdzCzyLiterkaBylaUzyta(wybor))
         {
-            if (this.slowo.charAt(i)== wybor)                 // jeszeli zganie literke 
+            dodajDoTablicyWykorzystanychSlow(wybor);
+            for ( int i=0; i < slowo.length(); i++)
             {
-                dodajZgadnietaLiterke(i,wybor);
-                this.probaZgadniecia++;
-                return;
+                if (this.slowo.charAt(i)== wybor)                 // jeszeli zganie literke 
+                {
+                    dodajZgadnietaLiterke(i,wybor);
+                    this.probaZgadniecia++;
+                    return;
+                }
             }
+            wyswietlslowoZgadywane();
+            gracz.blednaOdpowiedz();
         }
-        wyswietlslowoZgadywane();
-        gracz.blednaOdpowiedz();
     }
-    
     void zgadnijHaslo (String wybor, Gracz gracz )
     {
         if( this.slowo == wybor )
@@ -90,5 +96,16 @@ public class Slowa {
         losuj();
     }
 
-  
+    boolean sprawdzCzyLiterkaBylaUzyta(char wybor)
+    {
+        for(int i=0; i < uzyteLiterki.length ; i++)
+        {
+            if ( this.uzyteLiterki[i] == wybor )
+            {
+                System.out.println("Literka "+ wybor +" tak juz zostala uzyta ");
+                return true; 
+            }
+        }
+        return false;
+    }
 }
