@@ -14,10 +14,13 @@ public class KCK {
 
     /**
      * @param args the command line arguments
+     * @throws java.io.IOException
      */
     public static void main(String[] args) throws IOException {
         // TODO code application logic here
-        System.out.println(" Wisilec ");
+        Rysunki rysunki = new Rysunki();
+        rysunki.wyswietlTytul();
+        
         System.out.println(" 1 Gracz ");
         System.out.println(" 2 gracze");
         
@@ -32,7 +35,7 @@ public class KCK {
         Slowa slowo = new Slowa ();
         slowo.tymczasoweZapelnienie();
         
-        while(gracz1.iloscSzans >= 0)
+        while(gracz1.iloscSzans >= 0 || slowo.odgadnieteHaslo == false)
         {
             slowo.wyswietlslowoZgadywane();
             
@@ -56,7 +59,11 @@ public class KCK {
             slowo.dodajLiterke(literka,gracz1);
         
             slowo.wyswietlUzyteLiterki();
-       
+            
+            if (gracz1.iloscSzans == 3)
+            {
+                slowo.poprosLiterke(gracz1);
+            }
         } 
         
     }

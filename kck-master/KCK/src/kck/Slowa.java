@@ -6,6 +6,7 @@
 package kck;
 
 import java.io.IOException;
+import java.util.Random;
 
 /**
  *
@@ -17,6 +18,7 @@ public class Slowa {
     private char [] uzyteLiterki = new char [32];
     private int probaZgadniecia =0;
     private int a = 1;
+    public boolean odgadnieteHaslo=false;
     
     void wyswietlUzyteLiterki()
     {
@@ -71,9 +73,15 @@ public class Slowa {
                     dodajZgadnietaLiterke(i,wybor);
                     this.probaZgadniecia++;
                     a=1;
+                    if(slowo.length()==slowoZgadywane.length)
+                    {
+                        odgadnieteHaslo = true;
+                    }
                 }
             }
             wyswietlslowoZgadywane();
+          
+            
             if(a == 0){
                 gracz.blednaOdpowiedz();
             }
@@ -91,15 +99,30 @@ public class Slowa {
         else 
             gracz.iloscSzans --;
     }
-    
-    void losuj()
+
+    void poprosLiterke (Gracz gracz) throws IOException                          // dobranie sobie literki
     {
-        this.slowo.length();
-    }
-    void poprosLiterke (Gracz gracz)                          // dobranie sobie literki
-    {
+        char wylosowaLiterka;
         gracz.iloscZdobytychPunktow -= 2;
-        losuj();
+        wylosowaLiterka = losujLiterke();
+        
+        System.out.println("Wylosowana literka "+ wylosowaLiterka);
+        dodajLiterke(wylosowaLiterka, gracz );
+        
+    }
+    char losujLiterke()
+    {
+        char literka;
+        int indeks;
+        Random random = new Random();
+        while(true)
+        {
+            indeks = random.nextInt(slowo.length());
+            if(slowoZgadywane[indeks] =='_')
+            {
+                return slowo.charAt(indeks);
+            }
+        }
     }
 
     boolean sprawdzCzyLiterkaBylaUzyta(char wybor)

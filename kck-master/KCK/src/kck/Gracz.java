@@ -6,7 +6,6 @@
 package kck;
 
 import java.io.IOException;
-import java.util.Scanner;
 
 /**
  *
@@ -38,7 +37,7 @@ public class Gracz {
     }
     void blednaOdpowiedz () throws IOException
     {
-         System.out.println("Nie trafiłem mlotu :/ ");
+         System.out.println("Nie trafiłem :/ ");
          this.iloscSzans --;
          if(iloscSzans == 4)
          {
@@ -145,14 +144,17 @@ public class Gracz {
              System.out.println(ANSI_GREEN + "\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\" " + ANSI_RESET);
              System.out.println(ANSI_GREEN + "\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\" "+ ANSI_RESET);
          }
-         else
-             System.out.println("Zostało Ci od wykotzystania "+ this.iloscSzans);
-         if(iloscSzans==-1)
+         else 
          {
              System.out.println("Niestety przegrałes ");
              return;
          }
-                
+         wyswietlIloscSzans();
+    }
+    
+    void wyswietlIloscSzans()
+    {
+        System.out.println("Szanse do wykorzystania: " + iloscSzans);
     }
 
 }
