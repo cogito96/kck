@@ -18,7 +18,10 @@ public class Slowa {
     private char [] uzyteLiterki = new char [32];
     private int probaZgadniecia =0;
     private int a = 1;
-    public boolean odgadnieteHaslo=false;
+    protected boolean odgadnieteHaslo=false;
+
+    
+    
     
     void wyswietlUzyteLiterki()
     {
@@ -71,16 +74,16 @@ public class Slowa {
                 if (this.slowo.charAt(i)== wybor)                 // jeszeli zganie literke 
                 {
                     dodajZgadnietaLiterke(i,wybor);
-                    this.probaZgadniecia++;
+                    probaZgadniecia++;
                     a=1;
-                    if(slowo.length()==slowoZgadywane.length)
+                    if(slowo.equals(slowoZgadywane))
                     {
+                        System.out.println("zzzzzzzzzzzzzzzzzz");
                         odgadnieteHaslo = true;
                     }
                 }
             }
             wyswietlslowoZgadywane();
-          
             
             if(a == 0){
                 gracz.blednaOdpowiedz();
@@ -89,7 +92,7 @@ public class Slowa {
     }
     void zgadnijHaslo (String wybor, Gracz gracz )
     {
-        if( this.slowo == wybor )
+        if( this.slowo.equals(wybor))
         {
             if( this.probaZgadniecia == 0)
             {

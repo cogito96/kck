@@ -18,12 +18,12 @@ public class KCK {
      */
     public static void main(String[] args) throws IOException {
         // TODO code application logic here
-        Rysunki rysunki = new Rysunki();
+        RysunkiWisielec rysunki = new RysunkiWisielec();
         rysunki.wyswietlTytul();
         
         System.out.println(" 1 Gracz ");
         System.out.println(" 2 gracze");
-        
+         
         
         System.out.println("Podaj imie gracza ");
         Scanner nazwa = new Scanner(System.in);
@@ -57,13 +57,15 @@ public class KCK {
         
             
             slowo.dodajLiterke(literka,gracz1);
-        
+            if (slowo.odgadnieteHaslo == true)
+            {
+                rysunki.wyswietlWygrana();
+                return;
+            }
+            
             slowo.wyswietlUzyteLiterki();
             
-            if (gracz1.iloscSzans == 3)
-            {
-                slowo.poprosLiterke(gracz1);
-            }
+         
         } 
         
     }
