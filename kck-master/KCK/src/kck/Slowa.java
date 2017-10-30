@@ -76,9 +76,8 @@ public class Slowa {
                     dodajZgadnietaLiterke(i,wybor);
                     probaZgadniecia++;
                     a=1;
-                    if(slowo.equals(slowoZgadywane))
+                    if(sprawdzCzyOdgadnietyWyraz(slowoZgadywane))
                     {
-                        System.out.println("zzzzzzzzzzzzzzzzzz");
                         odgadnieteHaslo = true;
                     }
                 }
@@ -139,5 +138,17 @@ public class Slowa {
             }
         }
         return false;
+    }
+    
+    boolean sprawdzCzyOdgadnietyWyraz (char [] wybor)
+    {
+        for (int i = 0; i < slowoZgadywane.length ; i ++)
+        {
+            if (slowoZgadywane[i] == '_')
+            {
+                return false;
+            }
+        }
+        return true;
     }
 }

@@ -13,10 +13,9 @@ import java.io.IOException;
  */
 public class Gracz {
     String imie;
-    int iloscSzans;
     int iloscZdobytychPunktow;
     int poziomGry;
-    
+    int iloscSzans;
     
     RysunkiWisielec rysunkiWisielec = new RysunkiWisielec();
    
@@ -35,7 +34,16 @@ public class Gracz {
     {
          System.out.println("Nie trafiłem :/ ");
          this.iloscSzans --;
-         if(iloscSzans == 4)
+         
+         if(iloscSzans == 6)
+         {
+             rysunkiWisielec.rysunekIloscSzans6();
+         }
+         else if(iloscSzans == 5)
+         {
+               rysunkiWisielec.rysynekIloscSzans5();
+         }
+         else if(iloscSzans == 4)
          {
              rysunkiWisielec.rysynekIloscSzans4();
          }

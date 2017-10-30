@@ -16,7 +16,7 @@ public class KCK {
      * @param args the command line arguments
      * @throws java.io.IOException
      */
-    public static void main(String[] args) throws IOException {
+    public static void main(String args[]) throws IOException {
         // TODO code application logic here
         RysunkiWisielec rysunki = new RysunkiWisielec();
         rysunki.wyswietlTytul();

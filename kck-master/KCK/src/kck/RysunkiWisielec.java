@@ -23,7 +23,28 @@ public class RysunkiWisielec {
     public static final String ANSI_CYAN = "\u001B[36m";
     
     
-    void rysynekIloscSzans4()
+    void rysunekIloscSzans6()
+    {
+             System.out.println("| |    ");
+             System.out.println("| |    ");
+             System.out.println("| |    ");
+             System.out.println("| |    ");
+             System.out.println("| |    ");
+             System.out.println("| |    ");
+             System.out.println("| |    ");
+             System.out.println("| |    ");
+             System.out.println("| |    ");
+             System.out.println("| |    ");
+             System.out.println("| |    ");
+             System.out.println("| |    ");
+             System.out.println("| |    ");
+             System.out.println("| |    ");
+             System.out.println("| |    ");
+             System.out.println("| |    ");
+             System.out.println(ANSI_GREEN + "\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\" " + ANSI_RESET);
+             System.out.println(ANSI_GREEN + "\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\" "+ ANSI_RESET);
+    }
+    void rysynekIloscSzans5()
     {
              System.out.println("| .__________" + ANSI_YELLOW + "))" + ANSI_RESET + "______| ");
              System.out.println("| | / / ");
@@ -44,10 +65,31 @@ public class RysunkiWisielec {
              System.out.println(ANSI_GREEN + "\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\" " + ANSI_RESET);
              System.out.println(ANSI_GREEN + "\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\" "+ ANSI_RESET);
     }
-    
+
+    void rysynekIloscSzans4()
+    {
+             System.out.println("| .__________" + ANSI_YELLOW + "))" + ANSI_RESET + "______| ");
+             System.out.println("| | / /      " + ANSI_YELLOW + "|| " + ANSI_RESET);
+             System.out.println("| |/ /       " + ANSI_YELLOW + "|| " + ANSI_RESET);
+             System.out.println("| | /        " + ANSI_YELLOW + "||" + ANSI_RESET);
+             System.out.println("| |/         " + ANSI_YELLOW + "\\/" + ANSI_RESET);
+             System.out.println("| |          ");
+             System.out.println("| |          ");
+             System.out.println("| |          ");
+             System.out.println("| |          ");
+             System.out.println("| |          ");
+             System.out.println("| |          ");
+             System.out.println("| |          ");
+             System.out.println("| |          ");
+             System.out.println("| |          ");
+             System.out.println("| |          ");
+             System.out.println("| |          ");
+             System.out.println(ANSI_GREEN + "\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\" " + ANSI_RESET);
+             System.out.println(ANSI_GREEN + "\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\" "+ ANSI_RESET);  
+    }
     void rysunekIloscSzans3()
     {
-            System.out.println("| .__________" + ANSI_YELLOW + "))" + ANSI_RESET + "______| ");
+             System.out.println("| .__________" + ANSI_YELLOW + "))" + ANSI_RESET + "______| ");
              System.out.println("| | / /      " + ANSI_YELLOW + "|| " + ANSI_RESET);
              System.out.println("| |/ /       " + ANSI_YELLOW + "|| " + ANSI_RESET);
              System.out.println("| | /        " + ANSI_YELLOW + "||" + ANSI_RESET);
@@ -111,7 +153,7 @@ public class RysunkiWisielec {
              System.out.println(ANSI_GREEN + "\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\" "+ ANSI_RESET);
     }
     
-    void rysunekIloscSzans0 ()
+    void rysunekIloscSzans0()
     {
              System.out.println("| .__________" + ANSI_YELLOW + "))" + ANSI_RESET + "______| ");
              System.out.println("| | / /      " + ANSI_YELLOW + "|| " + ANSI_RESET);
@@ -135,15 +177,15 @@ public class RysunkiWisielec {
     
     void wyswietlPrzegrana()
     {
-        System.out.println("'   ██▓███  ██▀███ ▒███████▓█████  ▄████ ██▀███  ▄▄▄     ▓█████  ██████ ");        
-        System.out.println("'  ▓██░  ██▓██ ▒ ██▒ ▒ ▒ ▄▀▓█   ▀ ██▒ ▀█▓██ ▒ ██▒████▄   ▓█   ▀▒██    ▒"); 
-        System.out.println("'  ▓██░ ██▓▓██ ░▄█ ░ ▒ ▄▀▒░▒███  ▒██░▄▄▄▓██ ░▄█ ▒██  ▀█▄ ▒███  ░ ▓██▄   ");
-        System.out.println("'  ▒██▄█▓▒ ▒██▀▀█▄   ▄▀▒   ▒▓█  ▄░▓█  ██▒██▀▀█▄ ░██▄▄▄▄██▒▓█  ▄  ▒   ██▒");
-        System.out.println("'  ▒██▒ ░  ░██▓ ▒██▒███████░▒████░▒▓███▀░██▓ ▒██▒▓█   ▓██░▒████▒██████▒▒");
-        System.out.println("'  ▒▓▒░ ░  ░ ▒▓ ░▒▓░▒▒ ▓░▒░░░ ▒░ ░░▒   ▒░ ▒▓ ░▒▓░▒▒   ▓▒█░░ ▒░ ▒ ▒▓▒ ▒ ░");
-        System.out.println("'  ░▒ ░      ░▒ ░ ▒░░▒ ▒ ░ ▒░ ░  ░ ░   ░  ░▒ ░ ▒░ ▒   ▒▒ ░░ ░  ░ ░▒  ░ ░");
-        System.out.println("'  ░░        ░░   ░░ ░ ░ ░ ░  ░  ░ ░   ░  ░░   ░  ░   ▒     ░  ░  ░  ░  ");
-        System.out.println("'             ░      ░ ░      ░  ░     ░   ░          ░  ░  ░  ░     ░  ");
+        System.out.println("'   â–�â–�â–“â–�â–�â–�  â–�â–�â–€â–�â–�â–� â–’â–�â–�â–�â–�â–�â–�â–�â–“â–�â–�â–�â–�â–�  â–„â–�â–�â–�â–� â–�â–�â–€â–�â–�â–�  â–„â–„â–„     â–“â–�â–�â–�â–�â–�  â–�â–�â–�â–�â–�â–� ");        
+        System.out.println("'  â–“â–�â–�â–‘  â–�â–�â–“â–�â–� â–’ â–�â–�â–’ â–’ â–’ â–„â–€â–“â–�   â–€ â–�â–�â–’ â–€â–�â–“â–�â–� â–’ â–�â–�â–’â–�â–�â–�â–�â–„   â–“â–�   â–€â–’â–�â–�    â–’"); 
+        System.out.println("'  â–“â–�â–�â–‘ â–�â–�â–“â–“â–�â–� â–‘â–„â–� â–‘ â–’ â–„â–€â–’â–‘â–’â–�â–�â–�  â–’â–�â–�â–‘â–„â–„â–„â–“â–�â–� â–‘â–„â–� â–’â–�â–�  â–€â–�â–„ â–’â–�â–�â–�  â–‘ â–“â–�â–�â–„   ");
+        System.out.println("'  â–’â–�â–�â–„â–�â–“â–’ â–’â–�â–�â–€â–€â–�â–„   â–„â–€â–’   â–’â–“â–�  â–„â–‘â–“â–�  â–�â–�â–’â–�â–�â–€â–€â–�â–„ â–‘â–�â–�â–„â–„â–„â–„â–�â–�â–’â–“â–�  â–„  â–’   â–�â–�â–’");
+        System.out.println("'  â–’â–�â–�â–’ â–‘  â–‘â–�â–�â–“ â–’â–�â–�â–’â–�â–�â–�â–�â–�â–�â–�â–‘â–’â–�â–�â–�â–�â–‘â–’â–“â–�â–�â–�â–€â–‘â–�â–�â–“ â–’â–�â–�â–’â–“â–�   â–“â–�â–�â–‘â–’â–�â–�â–�â–�â–’â–�â–�â–�â–�â–�â–�â–’â–’");
+        System.out.println("'  â–’â–“â–’â–‘ â–‘  â–‘ â–’â–“ â–‘â–’â–“â–‘â–’â–’ â–“â–‘â–’â–‘â–‘â–‘ â–’â–‘ â–‘â–‘â–’   â–’â–‘ â–’â–“ â–‘â–’â–“â–‘â–’â–’   â–“â–’â–�â–‘â–‘ â–’â–‘ â–’ â–’â–“â–’ â–’ â–‘");
+        System.out.println("'  â–‘â–’ â–‘      â–‘â–’ â–‘ â–’â–‘â–‘â–’ â–’ â–‘ â–’â–‘ â–‘  â–‘ â–‘   â–‘  â–‘â–’ â–‘ â–’â–‘ â–’   â–’â–’ â–‘â–‘ â–‘  â–‘ â–‘â–’  â–‘ â–‘");
+        System.out.println("'  â–‘â–‘        â–‘â–‘   â–‘â–‘ â–‘ â–‘ â–‘ â–‘  â–‘  â–‘ â–‘   â–‘  â–‘â–‘   â–‘  â–‘   â–’     â–‘  â–‘  â–‘  â–‘  ");
+        System.out.println("'             â–‘      â–‘ â–‘      â–‘  â–‘     â–‘   â–‘          â–‘  â–‘  â–‘  â–‘     â–‘  ");
         System.out.println("'                                                                           ");    
     }
     
